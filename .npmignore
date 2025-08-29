@@ -1,0 +1,23 @@
+# build cache
+node_modules/
+package-lock.json
+
+# dev 
+.eslintrc.js
+.eslintrc.prepublish.js
+.editorconfig
+.prettierrc.js
+tsconfig.json
+gulpfile.js
+
+# docker
+docker/
+*.env
+
+# git
+.gitignore
+.git/
+
+*.log
+*.bak
+*.tmp

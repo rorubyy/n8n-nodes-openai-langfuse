@@ -1,0 +1,65 @@
+{
+  "name": "n8n-nodes-openai-langfuse",
+  "version": "0.1.1",
+  "description": "n8n community node: Langfuse + OpenAI-compatible LLM provider",
+  "keywords": [
+    "n8n-community-node-package",
+    "langfuse",
+    "langchain",
+    "openai"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "author": {
+    "name": "Ruby Lo",
+    "email": "rorubyy@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rorubyy/n8n-nodes-openai-langfuse.git"
+  },
+  "engines": {
+    "node": ">=20.15"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "npx rimraf dist && tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/OpenAiApiWithLangfuseApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/LmChatOpenAiLangfuse/LmChatOpenAiLangfuse.node.js"
+    ]
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.0",
+    "@langchain/openai": "^0.3.0",
+    "langfuse-langchain": "^3.0.0",
+    "proxy-from-env": "^1.1.0",
+    "undici": "^7.15.0"
+  },
+  "devDependencies": {
+    "@types/proxy-from-env": "^1.0.4",
+    "@typescript-eslint/parser": "~8.32.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.3",
+    "gulp": "^5.0.1",
+    "gulp-cli": "^3.1.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
