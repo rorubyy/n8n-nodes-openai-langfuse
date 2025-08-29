@@ -82,7 +82,7 @@ Langfuse Secret Key *|Langfuse secret key used for tracing authentication|`sk-xx
 ### Credential UI Preview
 Once filled out, your credential should look like this:
 
-![credentials-example](./assets/credential-example.png)
+![credentials-example](https://github.com/rorubyy/n8n-nodes-openai-langfuse/blob/main/assets/credential-example.png?raw=true)
 ✅ After saving the credential, you're ready to use the node and see traces in your Langfuse dashboard.
 
 ## Operations
@@ -98,7 +98,7 @@ You can trace every run with context such as `sessionId`, `userId`, and any cust
 | `userId` | `string` | ID representing the end user making the request |
 | `metadata` | `object` | Custom JSON object with additional context (e.g., workflowId, env) |
 
-![langfuse-metadata-example](./assets/langfuse-metadata-example.png)
+![langfuse-metadata-example](https://github.com/rorubyy/n8n-nodes-openai-langfuse/blob/main/assets/langfuse-metadata-example.png?raw=true)
 ---
 ### 🧪 Example Setup
 | Input Field | Example Value |
@@ -117,16 +117,16 @@ Custom Metadata (JSON)
 ### Visual Example
 1. **Node Configuration UI**: This shows a sample n8n workflow using the Langfuse Chat Node.
 
-![node-example](./assets/node-example.png)
+![node-example](https://github.com/rorubyy/n8n-nodes-openai-langfuse/blob/main/assets/node-example.png?raw=true)
 
 2. **Workflow Setup**: A typical workflow using this node.
 
-![workflow-example](./assets/workflow-example.png)
+![workflow-example](https://github.com/rorubyy/n8n-nodes-openai-langfuse/blob/main/assets/workflow-example.png?raw=true)
 
 3. **Langfuse Trace Output**
 Here’s how traces appear inside the Langfuse dashboard.
 
-![langfuse-example](./assets/langfuse-example.png)
+![langfuse-example](https://github.com/rorubyy/n8n-nodes-openai-langfuse/blob/main/assets/langfuse-example.png?raw=true)
 
 
 ## Compatibility
@@ -145,4 +145,4 @@ Here’s how traces appear inside the Langfuse dashboard.
 
 ## Version History
 
-- **v1.0.0** – Initial release with OpenAI + Langfuse integration
+- **v1.0** – Initial release with OpenAI + Langfuse integration
