@@ -1,6 +1,7 @@
 # n8n-nodes-openai-langfuse
-
 An n8n community node that brings [Langfuse](https://langfuse.com) observability to your OpenAI chat workflows.
+
+npm package: [https://www.npmjs.com/package/n8n-nodes-openai-langfuse](https://www.npmjs.com/package/n8n-nodes-openai-langfuse)
 
 ## Features
 
