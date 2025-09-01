@@ -89,6 +89,7 @@ Once filled out, your credential should look like this:
 
 This node lets you inject Langfuse-compatible metadata into your OpenAI requests.  
 You can trace every run with context such as `sessionId`, `userId`, and any custom metadata.
+
 ---
 ### Supported Fields
 
