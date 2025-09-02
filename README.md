@@ -1,4 +1,7 @@
 # n8n-nodes-openai-langfuse
+
+> This project is proudly developed and maintained by **Wistron DXLab**.
+
 An n8n community node that brings [Langfuse](https://langfuse.com) observability to your OpenAI chat workflows.
 
 npm package: [https://www.npmjs.com/package/n8n-nodes-openai-langfuse](https://www.npmjs.com/package/n8n-nodes-openai-langfuse)
