@@ -1,6 +1,5 @@
 import { ChatOpenAI, type ClientOptions } from '@langchain/openai';
 import {
-    NodeConnectionType as NodeConnectionTypeT,
     jsonParse,
     type INodeType,
     type INodeTypeDescription,
@@ -10,6 +9,7 @@ import {
 
 import { CallbackHandler } from 'langfuse-langchain';
 import { searchModels } from './methods/loadModels';
+import { N8nLlmTracing } from './utils/N8nLlmTracing'
 
 
 export class LmChatOpenAiLangfuse implements INodeType {
@@ -46,7 +46,7 @@ export class LmChatOpenAiLangfuse implements INodeType {
         },
 
         inputs: [],
-        outputs: [NodeConnectionTypeT.AiLanguageModel],
+        outputs: ['ai_languageModel'],
         outputNames: ['Model'],
         credentials: [
             { name: 'openAiApiWithLangfuseApi', required: true },
@@ -435,7 +435,7 @@ export class LmChatOpenAiLangfuse implements INodeType {
             modelKwargs.reasoning_effort = options.reasoningEffort;
 
         const model = new ChatOpenAI({
-            callbacks: [lfHandler],
+            callbacks: [lfHandler, new N8nLlmTracing(this)],
             metadata: customMetadata,
             apiKey: credentials.apiKey as string,
             configuration: { baseURL: configuration.baseURL },
