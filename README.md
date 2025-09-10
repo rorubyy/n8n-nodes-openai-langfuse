@@ -1,7 +1,7 @@
 # n8n-nodes-openai-langfuse
 
-> This project is proudly developed and maintained by **Wistron DXLab**. <br>
-> Update: This is the new [**n8n-nodes-ai-agent-langfuse**](https://github.com/rorubyy/n8n-nodes-ai-agent-langfuse)
+> This project is proudly developed and maintained by **Wistron DXLab**. <br><br>
+> ⚡Update: This is the new [**n8n-nodes-ai-agent-langfuse**](https://github.com/rorubyy/n8n-nodes-ai-agent-langfuse)
  project, an upgraded version with Agent integration and enhanced structured tracing support.
 ![new-node-example](https://github.com/rorubyy/n8n-nodes-openai-langfuse/blob/main/assets/new-node-example.png?raw=true)
 
