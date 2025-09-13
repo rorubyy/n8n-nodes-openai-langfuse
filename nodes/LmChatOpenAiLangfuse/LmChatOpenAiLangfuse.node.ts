@@ -25,7 +25,7 @@ export class LmChatOpenAiLangfuse implements INodeType {
         name: 'lmChatOpenAiLangfuse',
         icon: { light: 'file:LmChatOpenAiWithLangfuseLight.icon.svg', dark: 'file:LmChatOpenAiWithLangfuseDark.icon.svg' },
         group: ['transform'],
-        version: [1, 1.1, 1.2],
+        version: [1, 2, 3],
         description: 'For advanced usage with an AI chain',
         defaults: {
             name: 'OpenAI Chat Model with Langfuse',
@@ -46,7 +46,9 @@ export class LmChatOpenAiLangfuse implements INodeType {
         },
 
         inputs: [],
-        outputs: ['ai_languageModel'],
+        // Cast to any to maintain compatibility across n8n type versions where 'ai_languageModel'
+        // may not yet be part of NodeConnectionType in local typings but is supported at runtime
+        outputs: ['ai_languageModel' as any],
         outputNames: ['Model'],
         credentials: [
             { name: 'openAiApiWithLangfuseApi', required: true },
@@ -175,7 +177,7 @@ export class LmChatOpenAiLangfuse implements INodeType {
                 default: '',
                 displayOptions: {
                     hide: {
-                        '@version': [{ _cnd: { gte: 1.2 } }],
+                        '@version': [{ _cnd: { gte: 3 } }],
                     },
                 },
             },
@@ -206,7 +208,7 @@ export class LmChatOpenAiLangfuse implements INodeType {
                 description: 'The model. Choose from the list, or specify an ID.',
                 displayOptions: {
                     hide: {
-                        '@version': [{ _cnd: { lte: 1.1 } }],
+                        '@version': [{ _cnd: { lte: 2 } }],
                     },
                 },
             },
@@ -238,7 +240,7 @@ export class LmChatOpenAiLangfuse implements INodeType {
                         type: 'string',
                         displayOptions: {
                             hide: {
-                                '@version': [{ _cnd: { gte: 1.1 } }],
+                                '@version': [{ _cnd: { gte: 2 } }],
                             },
                         },
                     },
@@ -400,7 +402,7 @@ export class LmChatOpenAiLangfuse implements INodeType {
 
         const version = this.getNode().typeVersion;
         const modelName =
-            version >= 1.2
+            version >= 3
                 ? (this.getNodeParameter('model.value', itemIndex) as string)
                 : (this.getNodeParameter('model', itemIndex) as string);
 
