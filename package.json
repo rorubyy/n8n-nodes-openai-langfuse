@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-openai-langfuse",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "description": "n8n community node: Langfuse + OpenAI-compatible LLM provider",
   "keywords": [
     "n8n-community-node-package",
