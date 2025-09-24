@@ -152,3 +152,6 @@ Here’s how traces appear inside the Langfuse dashboard.
 ## Version History
 
 - **v1.0** – Initial release with OpenAI + Langfuse integration
+
+## License
+MIT © 2025 Wistron DXLab  
